@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{494F3DF6-089D-426C-8AE7-E4C828A54F0A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QLDoAnSV</RootNamespace>
+    <AssemblyName>QLDoAnSV</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>..\packages\BouncyCastle.Cryptography.2.3.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="GemBox.Document, Version=35.0.0.1906, Culture=neutral, PublicKeyToken=b1b72c69714d4847, processorArchitecture=MSIL">
+      <HintPath>..\packages\GemBox.Document.35.0.1906\lib\net462\GemBox.Document.dll</HintPath>
+    </Reference>
+    <Reference Include="GemBox.Pdf, Version=17.0.0.1620, Culture=neutral, PublicKeyToken=b1b72c69714d4847, processorArchitecture=MSIL">
+      <HintPath>..\packages\GemBox.Pdf.17.0.1620\lib\net462\GemBox.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="HarfBuzzSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\packages\HarfBuzzSharp.7.3.0\lib\net462\HarfBuzzSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1004\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Pkcs11Interop, Version=5.1.1.0, Culture=neutral, PublicKeyToken=c10e9c2d8c006d2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Pkcs11Interop.5.1.1\lib\net45\Pkcs11Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="ReachFramework" />
+    <Reference Include="SkiaSharp, Version=2.88.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>..\packages\SkiaSharp.2.88.6\lib\net462\SkiaSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dangThongbao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dangThongbao.Designer.cs">
+      <DependentUpon>dangThongbao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdmin.Designer.cs">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formdangkygiangvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formdangkygiangvien.Designer.cs">
+      <DependentUpon>Formdangkygiangvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formdangkysinhvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formdangkysinhvien.Designer.cs">
+      <DependentUpon>Formdangkysinhvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmChamDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChamDiem.Designer.cs">
+      <DependentUpon>FrmChamDiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frmdangkychuyennganh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frmdangkychuyennganh.Designer.cs">
+      <DependentUpon>Frmdangkychuyennganh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDangKyDeTai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDangKyDeTai.Designer.cs">
+      <DependentUpon>FrmDangKyDeTai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHoiDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHoiDong.Designer.cs">
+      <DependentUpon>FrmHoiDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUpBaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUpBaoCao.Designer.cs">
+      <DependentUpon>FrmUpBaoCao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiangVienMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiangVienMain.Designer.cs">
+      <DependentUpon>GiangVienMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sinhvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sinhvien.Designer.cs">
+      <DependentUpon>Sinhvien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uploaddetai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Uploaddetai.Designer.cs">
+      <DependentUpon>Uploaddetai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user.cs" />
+    <Compile Include="UserSinhVien.cs" />
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dangThongbao.resx">
+      <DependentUpon>dangThongbao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAdmin.resx">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formdangkygiangvien.resx">
+      <DependentUpon>Formdangkygiangvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formdangkysinhvien.resx">
+      <DependentUpon>Formdangkysinhvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmChamDiem.resx">
+      <DependentUpon>FrmChamDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frmdangkychuyennganh.resx">
+      <DependentUpon>Frmdangkychuyennganh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDangKyDeTai.resx">
+      <DependentUpon>FrmDangKyDeTai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHoiDong.resx">
+      <DependentUpon>FrmHoiDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUpBaoCao.resx">
+      <DependentUpon>FrmUpBaoCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiangVienMain.resx">
+      <DependentUpon>GiangVienMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Sinhvien.resx">
+      <DependentUpon>Sinhvien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uploaddetai.resx">
+      <DependentUpon>Uploaddetai.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mbrilock_99595.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\HarfBuzzSharp.NativeAssets.macOS.7.3.0\build\net462\HarfBuzzSharp.NativeAssets.macOS.targets" Condition="Exists('..\packages\HarfBuzzSharp.NativeAssets.macOS.7.3.0\build\net462\HarfBuzzSharp.NativeAssets.macOS.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\HarfBuzzSharp.NativeAssets.macOS.7.3.0\build\net462\HarfBuzzSharp.NativeAssets.macOS.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\HarfBuzzSharp.NativeAssets.macOS.7.3.0\build\net462\HarfBuzzSharp.NativeAssets.macOS.targets'))" />
+    <Error Condition="!Exists('..\packages\HarfBuzzSharp.NativeAssets.Win32.7.3.0\build\net462\HarfBuzzSharp.NativeAssets.Win32.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\HarfBuzzSharp.NativeAssets.Win32.7.3.0\build\net462\HarfBuzzSharp.NativeAssets.Win32.targets'))" />
+    <Error Condition="!Exists('..\packages\SkiaSharp.NativeAssets.macOS.2.88.6\build\net462\SkiaSharp.NativeAssets.macOS.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SkiaSharp.NativeAssets.macOS.2.88.6\build\net462\SkiaSharp.NativeAssets.macOS.targets'))" />
+    <Error Condition="!Exists('..\packages\SkiaSharp.NativeAssets.Win32.2.88.6\build\net462\SkiaSharp.NativeAssets.Win32.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\SkiaSharp.NativeAssets.Win32.2.88.6\build\net462\SkiaSharp.NativeAssets.Win32.targets'))" />
+    <Error Condition="!Exists('..\packages\GemBox.Pdf.17.0.1620\build\netstandard2.0\GemBox.Pdf.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\GemBox.Pdf.17.0.1620\build\netstandard2.0\GemBox.Pdf.targets'))" />
+  </Target>
+  <Import Project="..\packages\HarfBuzzSharp.NativeAssets.Win32.7.3.0\build\net462\HarfBuzzSharp.NativeAssets.Win32.targets" Condition="Exists('..\packages\HarfBuzzSharp.NativeAssets.Win32.7.3.0\build\net462\HarfBuzzSharp.NativeAssets.Win32.targets')" />
+  <Import Project="..\packages\SkiaSharp.NativeAssets.macOS.2.88.6\build\net462\SkiaSharp.NativeAssets.macOS.targets" Condition="Exists('..\packages\SkiaSharp.NativeAssets.macOS.2.88.6\build\net462\SkiaSharp.NativeAssets.macOS.targets')" />
+  <Import Project="..\packages\SkiaSharp.NativeAssets.Win32.2.88.6\build\net462\SkiaSharp.NativeAssets.Win32.targets" Condition="Exists('..\packages\SkiaSharp.NativeAssets.Win32.2.88.6\build\net462\SkiaSharp.NativeAssets.Win32.targets')" />
+  <Import Project="..\packages\GemBox.Pdf.17.0.1620\build\netstandard2.0\GemBox.Pdf.targets" Condition="Exists('..\packages\GemBox.Pdf.17.0.1620\build\netstandard2.0\GemBox.Pdf.targets')" />
+</Project>
